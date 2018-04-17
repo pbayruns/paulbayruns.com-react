@@ -22,12 +22,20 @@ export default class AboutPage extends React.Component {
                     <img className="img-circle" src="/img/my head.svg" />
                 </div>
                 <div className="row row-spaced justify-content-center">
-                    <h1>Paul Bayruns</h1>
+                    <p>I'm Paul. Currently I'm a full stack developer for <a href="http://fitdegree.com/"> fitDEGREE</a>,
+                    working primarily in angular and PHP. I've also had my fair share of experience using React, Django, Java, C#, and a variety of Amazon Web Services.</p>
+                    <p>I like to engage both halves of my brain, having split my free time at Rowan University
+                    between the Computer Science and Art departments. Accordingly, several interests have grabbed my attention over the years,
+                    namely photography, video art, animation, game design, and American Sign Language. </p>
+                    <p>I also work persistently on a variety of personal projects, learning new technologies that catch my eye.
+                    </p>
                 </div>
                 <div className="row justify-content-center">
-                    <RaisedButton onClick={this.toggleAboutMe} label="About Me" primary={true} style={buttonStyle} />
                     <Link to={PAGES.PROJECTS.URL}>
-                        <RaisedButton label="Projects" primary={true} style={buttonStyle} />
+                        <RaisedButton label="See Projects" primary style={buttonStyle} />
+                    </Link>
+                    <Link to={PAGES.LANDING.URL}>
+                        <RaisedButton label="Back" secondary style={buttonStyle} />
                     </Link>
                 </div>
             </div>
