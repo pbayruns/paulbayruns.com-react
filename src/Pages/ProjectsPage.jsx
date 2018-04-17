@@ -7,7 +7,7 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 
 const style = {
-    marginTop: "25vh",
+    marginTop: "75px",
 };
 
 const buttonStyle = {

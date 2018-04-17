@@ -17,6 +17,10 @@ const buttonStyle = {
 export default class LandingPage extends React.Component {
     render() {
         return (
+            <React.Fragment>
+            <AppBar
+            title="Paul Bayruns"
+          />
             <div style={style} className="container">
                 <div className="row justify-content-center">
                     <img className="img-circle" src="/img/my head.svg" />
@@ -33,6 +37,7 @@ export default class LandingPage extends React.Component {
                     </Link>
                 </div>
             </div>
+            </React.Fragment>
         );
     }
 }

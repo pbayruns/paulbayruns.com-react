@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "unity-roguelike",
+"dataUrl": "roguelike.data.unityweb",
+"asmCodeUrl": "roguelike.asm.code.unityweb",
+"asmMemoryUrl": "roguelike.asm.memory.unityweb",
+"asmFrameworkUrl": "roguelike.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

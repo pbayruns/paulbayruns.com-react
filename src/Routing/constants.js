@@ -3,6 +3,7 @@ import LandingPage from '../Pages/LandingPage';
 import NotFoundPage from '../Pages/NotFoundPage';
 import ProjectsPage from '../Pages/ProjectsPage';
 import AboutPage from '../Pages/AboutPage';
+import GamePage from '../Pages/GamePage';
 
 //Constants for pages to be used across any page that has routes or redirects
 export const PAGES = {
@@ -24,6 +25,13 @@ export const PAGES = {
         URL: '/projects',
         DISPLAY_NAME: 'Projects',
         COMPONENT: ProjectsPage,
+        IS_EXACT: true,
+        IS_NAV: false
+    },
+    GAME: {
+        URL: '/roguelike',
+        DISPLAY_NAME: 'Roguelike',
+        COMPONENT: GamePage,
         IS_EXACT: true,
         IS_NAV: false
     },

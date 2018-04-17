@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
 
 const style = {
-    marginTop: "25vh",
+    marginTop: "75px",
 };
 
 const buttonStyle = {
@@ -22,12 +22,16 @@ export default class AboutPage extends React.Component {
                     <img className="img-circle" src="/img/my head.svg" />
                 </div>
                 <div className="row row-spaced justify-content-center">
-                    <p>I'm Paul. Currently I'm a full stack developer for <a href="http://fitdegree.com/"> fitDEGREE</a>,
-                    working primarily in angular and PHP. I've also had my fair share of experience using React, Django, Java, C#, and a variety of Amazon Web Services.</p>
-                    <p>I like to engage both halves of my brain, having split my free time at Rowan University
+                    <p className="body-copy">I'm Paul. Currently I'm a full stack developer for <a href="http://fitdegree.com/"> fitDEGREE</a>,
+                working primarily in angular and PHP. I've also had my fair share of experience using React, Django, Java, C#, and a variety of Amazon Web Services.</p>
+                </div>
+                <div className="row row-spaced justify-content-center">
+                    <p className="body-copy">I like to engage both halves of my brain, having split my free time at Rowan University
                     between the Computer Science and Art departments. Accordingly, several interests have grabbed my attention over the years,
-                    namely photography, video art, animation, game design, and American Sign Language. </p>
-                    <p>I also work persistently on a variety of personal projects, learning new technologies that catch my eye.
+                namely photography, video art, animation, game design, and American Sign Language. </p>
+                </div>
+                <div className="row row-spaced justify-content-center">
+                    <p className="body-copy">I also work persistently on a variety of personal projects, learning new technologies that catch my eye.
                     </p>
                 </div>
                 <div className="row justify-content-center">

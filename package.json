@@ -24,7 +24,8 @@
     "react-swipeable-views": "^0.12.13",
     "react-table": "^6.7.4",
     "react-toastify": "^2.2.1",
-    "react-transition-group": "^2.2.1"
+    "react-transition-group": "^2.2.1",
+    "react-unity-webgl": "^6.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
