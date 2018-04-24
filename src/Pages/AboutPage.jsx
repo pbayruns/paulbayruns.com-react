@@ -31,7 +31,7 @@ export default class AboutPage extends React.Component {
                 namely photography, video art, animation, game design, and American Sign Language. </p>
                 </div>
                 <div className="row row-spaced justify-content-center">
-                    <p className="body-copy">I also work persistently on a variety of personal projects, learning new technologies that catch my eye.
+                    <p className="body-copy">I also work persistently on a variety of personal projects to push myself to constantly learn.
                     </p>
                 </div>
                 <div className="row justify-content-center">

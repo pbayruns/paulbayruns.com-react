@@ -34,3 +34,14 @@ h1 {
 .body-copy{
   max-width: 500px;
 }
+.faded{
+  opacity: 0.7;
+}
+.project-icon{
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  bottom: 3px;
+  padding: 1px;
+  margin-right: 5px;
+}
