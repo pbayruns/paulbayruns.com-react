@@ -9,6 +9,7 @@ import Divider from 'material-ui/Divider';
 import pokeball from '../img/pokeball.svg'
 import unityLogo from '../img/unity-logo.svg';
 import pokeviewer from '../img/pokeviewer.png';
+import roguelike from '../img/roguelike.png';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import createMuiTheme from 'material-ui/styles/muiThemeable';
@@ -25,11 +26,11 @@ const buttonStyle = {
 export default class ProjectsPage extends React.Component {
     render() {
         return (
-            <div style={style} className="container">
-                <div className="row row-spaced justify-content-center">
+            <div style={style} className="container project-container">
+                <div className="row bottom-margin-lg justify-content-center">
                     <h1>Projects</h1>
                 </div>
-                <div className="row row-spaced justify-content-start">
+                <div className="row project-row justify-content-start">
                     <Paper className="col-lg-6 col-md-12 paper-padded paper" zDepth={2}>
                         <h2><img src={unityLogo} alt="unity logo" className="project-icon" />Roguelike RPG</h2>
                         <Divider />
@@ -38,17 +39,17 @@ export default class ProjectsPage extends React.Component {
                         <a href="https://github.com/pbayruns/unity-roguelike">
                             <RaisedButton label="See Code" labelColor={white} backgroundColor={grey800} />
                         </a>
-                        <Link to={PAGES.PROJECTS.URL}>
+                        <Link to={PAGES.GAME.URL}>
                             <RaisedButton label="Play Game" labelColor={grey800} backgroundColor={white} style={buttonStyle} />
                         </Link>
                     </Paper>
-                    <div className="col-lg-6 hidden-md-down screenshot-paper paper">
-                        <img src={pokeviewer} alt="pokeviewer screenshot" className="project-screenshot" />
+                    <div className="col-lg-6 hidden-md-down paper">
+                        <span className="img-aligner"></span><img src={roguelike} alt="pokeviewer screenshot" className="project-screenshot" />
                     </div>
                 </div>
-                <div className="row row-spaced justify-content-end">
-                    <div className="col-lg-6 hidden-md-down screenshot-paper paper">
-                        <img src={pokeviewer} alt="pokeviewer screenshot" className="project-screenshot" />
+                <div className="row project-row justify-content-end">
+                    <div className="col-lg-6 hidden-md-down paper">
+                        <span className="img-aligner"></span><img src={pokeviewer} alt="pokeviewer screenshot" className="project-screenshot" />
                     </div>
                     <Paper className="col-lg-6 col-md-12 paper-padded paper" zDepth={2}>
                         <h2><img src={pokeball} alt="pokeball" className="project-icon" />Pokeviewer</h2>
