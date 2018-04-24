@@ -8,6 +8,7 @@ import Divider from 'material-ui/Divider';
 
 import pokeball from '../img/pokeball.svg'
 import unityLogo from '../img/unity-logo.svg';
+import pokeviewer from '../img/pokeviewer.png';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import createMuiTheme from 'material-ui/styles/muiThemeable';
@@ -25,11 +26,11 @@ export default class ProjectsPage extends React.Component {
     render() {
         return (
             <div style={style} className="container">
-                <div className="row justify-content-center">
+                <div className="row row-spaced justify-content-center">
                     <h1>Projects</h1>
                 </div>
-                <div className="row justify-content-center">
-                    <Paper className="paper-padded" zDepth={2}>
+                <div className="row row-spaced justify-content-start">
+                    <Paper className="col-lg-6 col-md-12 paper-padded paper" zDepth={2}>
                         <h2><img src={unityLogo} alt="unity logo" className="project-icon" />Roguelike RPG</h2>
                         <Divider />
                         <p className="body-copy faded">A 2D roguelike RPG created in C# using the Unity game engine.
@@ -41,9 +42,15 @@ export default class ProjectsPage extends React.Component {
                             <RaisedButton label="Play Game" labelColor={grey800} backgroundColor={white} style={buttonStyle} />
                         </Link>
                     </Paper>
+                    <div className="col-lg-6 hidden-md-down screenshot-paper paper">
+                        <img src={pokeviewer} alt="pokeviewer screenshot" className="project-screenshot" />
+                    </div>
                 </div>
-                <div className="row justify-content-center">
-                    <Paper className="paper-padded" zDepth={2}>
+                <div className="row row-spaced justify-content-end">
+                    <div className="col-lg-6 hidden-md-down screenshot-paper paper">
+                        <img src={pokeviewer} alt="pokeviewer screenshot" className="project-screenshot" />
+                    </div>
+                    <Paper className="col-lg-6 col-md-12 paper-padded paper" zDepth={2}>
                         <h2><img src={pokeball} alt="pokeball" className="project-icon" />Pokeviewer</h2>
                         <Divider />
                         <p className="body-copy faded">A Silex & HTML-template driven website for viewing information and stats about pokemon, utilizing a publicly available sqlite pokemon database.</p>
