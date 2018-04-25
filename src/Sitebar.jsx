@@ -20,14 +20,17 @@ export default class Sitebar extends React.Component {
     render() {
         return (
             <AppBar
-                title={<span className="hidden-under-md">Paul Bayruns</span>}
+                title={<React.Fragment>
+                    <span className="sitebar-title hidden-under-xxs">Paul Bayruns</span>
+                    <span className="sitebar-title hidden-above-xxs hidden-under-xxxs">PB</span>
+                </React.Fragment>}
                 zDepth={1}
                 style={appbarStyle}
                 titleStyle={appbarTitleStyle}
             >
-                <div className="row justify-content-center navbar">
+                <div className="row justify-content-center">
                     <Link to={PAGES.LANDING.URL}>
-                        <FlatButton label="Home" primary/>
+                        <FlatButton label="Home" primary />
                     </Link>
                     <Link to={PAGES.ABOUT.URL}>
                         <FlatButton label="About" primary />

@@ -22,6 +22,19 @@ h1 {
     font-size: 3em;
 }
 
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.fullscreen-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .text-center {
     text-align: center;
 }
@@ -40,6 +53,8 @@ h1 {
 }
 
 .body-copy {
+    display: inline-block;
+    width: 90%;
     max-width: 500px;
 }
 
@@ -67,45 +82,73 @@ h1 {
     transition: max-width 0.5s ease;
     transition-delay: 0.5s;
 }
-.project-container{
-  padding-bottom: 150px;
+
+.project-container {
+    padding-bottom: 150px;
 }
-.project-row{
-  margin-top: 50px;
-  margin-bottom: 50px;
-  transition: all 0.5s ease;
+
+.project-row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: all 0.5s ease;
 }
 
 .paper {
     max-width: calc(100vw - 20px);
 }
+
 .img-aligner {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
-@media only screen and (max-width: 992px) {
+@media (max-width: 992px) {
     .project-screenshot {
-      max-width: 0px;
-      display: block;
-      transition: max-width 0.5s ease;
-  }
-  .project-row{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    transition: all 0.5s ease;
-  }
-
-  .hidden-under-md{
-      display: none;
-  }
+        max-width: 0px;
+        display: block;
+        transition: max-width 0.5s ease;
+    }
+    .project-row {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        transition: all 0.5s ease;
+    }
+    .hidden-under-md {
+        display: none;
+    }
 }
 
-.bottom-margin-lg{
-  margin-bottom: 70px;
+@media (max-width: 768px) {
+    .hidden-under-sm {
+        display: none;
+    }
+
+    .hidden-under-xs {
+        display: none;
+    }
+}
+@media (max-width: 507px) {
+    .hidden-under-xxs{
+        display: none;
+    }
+}
+@media (min-width: 506px) {
+    .hidden-above-xxs{
+        display: none;
+    }
 }
 
-.locked-to-960{
+@media (max-width: 412px) {
+    .hidden-under-xxxs{
+        display: none;
+    }
+}
+
+.bottom-margin-lg {
+    margin-bottom: 70px;
+}
+
+.locked-to-960 {
     max-width: 960px;
 }
