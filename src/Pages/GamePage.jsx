@@ -10,7 +10,6 @@ import MenuItem from 'material-ui/MenuItem';
 import Paper from 'material-ui/Paper';
 import Menu from 'material-ui/Menu';
 import Divider from 'material-ui/Divider/Divider';
-import { grey800, white } from 'material-ui/styles/colors';
 
 import unityLogo from '../img/unity-logo.svg';
 

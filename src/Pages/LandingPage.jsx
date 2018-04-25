@@ -4,8 +4,6 @@ import { PAGES } from '../Routing/constants.js';
 import RaisedButton from 'material-ui/RaisedButton';
 import Sitebar from '../Sitebar';
 
-import myHead from "../img/my head.svg";
-
 const style = {
     marginTop: "25vh",
 };
@@ -19,12 +17,14 @@ export default class LandingPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Sitebar/>
+                <Sitebar />
                 <div style={style} className="container">
 
-                    <div className="row row-spaced justify-content-center">
-                        <h1>Paul Bayruns</h1>
-                        <h6 className="faded">Full Stack Developer</h6>
+                    <div className="row row-spaced justify-content-center text-center">
+                        <span>
+                            <h1>Paul Bayruns</h1>
+                            <h6 className="faded">Full Stack Developer</h6>
+                        </span>
                     </div>
                     <div className="row justify-content-center">
                         <Link to={PAGES.ABOUT.URL}>
