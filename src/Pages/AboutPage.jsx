@@ -7,7 +7,7 @@ import myHead from "../img/my head.svg";
 import Sitebar from '../Sitebar';
 
 const style = {
-    marginTop: "75px",
+    marginTop: "10vh",
 };
 
 const buttonStyle = {

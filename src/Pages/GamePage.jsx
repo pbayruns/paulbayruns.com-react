@@ -6,6 +6,9 @@ import Binder from '../util/binder.js';
 import Unity from 'react-unity-webgl';
 import Sitebar from '../Sitebar';
 
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+
 const progressStyle = {
     maxWidth: "50vw",
     height: "10px"
@@ -28,7 +31,8 @@ export default class GamePage extends React.Component {
             unityHeight: DEFAULT_UNITY_DIMENSION,
             isFullScreen: false,
             progress: 0,
-            loaded: false
+            loaded: false,
+            open: false
         };
 
     }
@@ -91,6 +95,10 @@ export default class GamePage extends React.Component {
         }
     }
 
+    handleToggle() {
+        this.setState({ open: !this.state.open })
+    };
+
     render() {
         let { unityHeight, unityWidth, isFullScreen, progress, loaded, bar } = this.state;
         let buttonRow, loadingRow = "";
@@ -120,6 +128,10 @@ export default class GamePage extends React.Component {
         } else if (!isFullScreen) {
             buttonRow = <div className="row row-spaced  justify-content-center">
                 <RaisedButton onClick={this.showFullscreen} label="Fullscreen" primary />
+                <RaisedButton
+                    label="View Controls"
+                    onClick={this.handleToggle}
+                />
             </div>;
         }
 
@@ -132,6 +144,13 @@ export default class GamePage extends React.Component {
         return (
             <React.Fragment>
                 {bar}
+                <Drawer open={true} width="50%">
+                    <MenuItem primaryText="Move" secondaryText="WASD" />
+                    <MenuItem primaryText="Attack" secondaryText="J or Left Click" />
+                    <MenuItem primaryText="Inventory" secondaryText="I or Tab" />
+                    <MenuItem primaryText="Stats" secondaryText="P" />
+                    <MenuItem primaryText="Menu" secondaryText="Esc" />
+                </Drawer>
                 <div className={outerDivClass}>
                     <div className={UnityDivClasses}>
                         <Unity

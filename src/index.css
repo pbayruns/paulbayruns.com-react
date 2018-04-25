@@ -50,12 +50,17 @@ h1 {
 
 .paper-padded {
     padding: 30px;
+    padding-left: 30px !important;
 }
 
 .body-copy {
     display: inline-block;
     width: 90%;
     max-width: 500px;
+}
+
+.navlink-active>button {
+    color: #FF9800 !important;
 }
 
 .faded {
@@ -81,6 +86,7 @@ h1 {
     margin-right: auto;
     transition: max-width 0.5s ease;
     transition-delay: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
 }
 
 .project-container {
@@ -123,32 +129,29 @@ h1 {
     .hidden-under-sm {
         display: none;
     }
-
     .hidden-under-xs {
         display: none;
     }
 }
+
 @media (max-width: 507px) {
-    .hidden-under-xxs{
+    .hidden-under-xxs {
         display: none;
     }
 }
+
 @media (min-width: 506px) {
-    .hidden-above-xxs{
+    .hidden-above-xxs {
         display: none;
     }
 }
 
 @media (max-width: 412px) {
-    .hidden-under-xxxs{
+    .hidden-under-xxxs {
         display: none;
     }
 }
 
 .bottom-margin-lg {
     margin-bottom: 70px;
-}
-
-.locked-to-960 {
-    max-width: 960px;
 }

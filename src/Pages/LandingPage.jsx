@@ -21,9 +21,7 @@ export default class LandingPage extends React.Component {
             <React.Fragment>
                 <Sitebar/>
                 <div style={style} className="container">
-                    <div className="row justify-content-center">
-                        <img className="img-circle" src={myHead} alt="A vector graphic of my head" />
-                    </div>
+
                     <div className="row row-spaced justify-content-center">
                         <h1>Paul Bayruns</h1>
                     </div>
