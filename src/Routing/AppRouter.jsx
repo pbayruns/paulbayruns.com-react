@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-toastify/dist/ReactToastify.min.css';
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Binder from '../util/binder.js';
 import { spring, AnimatedSwitch } from 'react-router-transition';
 import './animated-switch.css';
@@ -45,7 +45,7 @@ export default class AppRouter extends React.Component {
         const fadeTransitionConfig = { stiffness: 200, damping: 22 };
 
         const popTransitionConfig = { stiffness: 360, damping: 25 };
-        
+
         const slideTransitionConfig = { stiffness: 330, damping: 30 };
         const noTransition = {
 
@@ -77,53 +77,53 @@ export default class AppRouter extends React.Component {
             }
         };
 
-        const slideLeftTransition = {
 
-            atEnter: Object.assign({}, noTransition.atEnter, { offset: 100 }),
-            
-            atLeave: Object.assign({}, noTransition.atLeave, { offset: spring(-100, slideTransitionConfig) }),
-            
-            atActive: Object.assign({}, noTransition.atLeave, { offset: spring(0, slideTransitionConfig) }),
-            
-            mapStyles: noTransition.mapStyles
-            };
 
         const fadeTransition = {
 
             atEnter: Object.assign({}, noTransition.atEnter, { opacity: 0 }),
-            
+
             atLeave: Object.assign({}, noTransition.atLeave, { opacity: spring(0, fadeTransitionConfig) }),
-            
+
             atActive: Object.assign({}, noTransition.atLeave, { opacity: spring(1, fadeTransitionConfig) }),
-            
-            mapStyles: noTransition.mapStyles
-            };
-
-        // child matches will...
-        const bounceTransition = {
-            // start in a transparent, upscaled state
-            atEnter: {
-                scale: 0
-            },
-            // leave in a transparent, downscaled state
-            atLeave: {
-                scale: 0
-            },
-            // and rest at an opaque, normally-scaled state
-            atActive: {
-                scale: 1
-            },
-        };
-        const popTransition = {
-
-            atEnter: Object.assign({}, noTransition.atEnter, { scale: 0.8 }),
-
-            atLeave: Object.assign({}, noTransition.atLeave, { scale: spring(0.8, popTransitionConfig) }),
-
-            atActive: Object.assign({}, noTransition.atLeave, { scale: spring(1, popTransitionConfig) }),
 
             mapStyles: noTransition.mapStyles
         };
+        // const slideLeftTransition = {
+
+        //     atEnter: Object.assign({}, noTransition.atEnter, { offset: 100 }),
+
+        //     atLeave: Object.assign({}, noTransition.atLeave, { offset: spring(-100, slideTransitionConfig) }),
+
+        //     atActive: Object.assign({}, noTransition.atLeave, { offset: spring(0, slideTransitionConfig) }),
+
+        //     mapStyles: noTransition.mapStyles
+        // };
+        // // child matches will...
+        // const bounceTransition = {
+        //     // start in a transparent, upscaled state
+        //     atEnter: {
+        //         scale: 0
+        //     },
+        //     // leave in a transparent, downscaled state
+        //     atLeave: {
+        //         scale: 0
+        //     },
+        //     // and rest at an opaque, normally-scaled state
+        //     atActive: {
+        //         scale: 1
+        //     },
+        // };
+        // const popTransition = {
+
+        //     atEnter: Object.assign({}, noTransition.atEnter, { scale: 0.8 }),
+
+        //     atLeave: Object.assign({}, noTransition.atLeave, { scale: spring(0.8, popTransitionConfig) }),
+
+        //     atActive: Object.assign({}, noTransition.atLeave, { scale: spring(1, popTransitionConfig) }),
+
+        //     mapStyles: noTransition.mapStyles
+        // };
 
         return (
             <AnimatedSwitch

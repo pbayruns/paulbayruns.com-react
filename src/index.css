@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 h1,
@@ -95,8 +96,16 @@ h1 {
     margin-bottom: 0px;
     transition: all 0.5s ease;
   }
+
+  .hidden-under-md{
+      display: none;
+  }
 }
 
 .bottom-margin-lg{
   margin-bottom: 70px;
+}
+
+.locked-to-960{
+    max-width: 960px;
 }

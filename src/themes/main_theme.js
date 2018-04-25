@@ -1,8 +1,7 @@
 
 import {
-  lightBlue500, lightBlue700,
-  pinkA200, yellow600, 
-  grey100, grey300, grey400, grey500,
+  lightBlue500, lightBlue700, yellow600, 
+  grey300, grey400, grey500,
   white, darkBlack, fullBlack,
 } from 'material-ui/styles/colors';
 import { fade } from 'material-ui/utils/colorManipulator';
