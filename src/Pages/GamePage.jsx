@@ -6,8 +6,13 @@ import Binder from '../util/binder.js';
 import Unity from 'react-unity-webgl';
 import Sitebar from '../Sitebar';
 
-import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import Paper from 'material-ui/Paper';
+import Menu from 'material-ui/Menu';
+import Divider from 'material-ui/Divider/Divider';
+import { grey800, white } from 'material-ui/styles/colors';
+
+import unityLogo from '../img/unity-logo.svg';
 
 const progressStyle = {
     maxWidth: "50vw",
@@ -101,16 +106,22 @@ export default class GamePage extends React.Component {
 
     render() {
         let { unityHeight, unityWidth, isFullScreen, progress, loaded, bar } = this.state;
-        let buttonRow, loadingRow = "";
+        let controls, buttonRow, loadingRow = "";
 
         //if the user is on mobile, don't render the game
         //instead return a message telling them
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
             return (<React.Fragment>
                 <Sitebar />
-                <div className="row row-spaced justify-content-center">
-                    <h1>Unfortunately, Unity cannot run on mobile web browsers.</h1>
-                    <h4 className="faded">But don't worry, later on I will be adding mobile support!</h4>
+                <div className="container container-padded">
+                    <div className="row row-spaced justify-content-center text-center">
+                        <span>
+                            <h1 className="body-copy">Unfortunately, mobile devices do not support WebGL.</h1>
+                            <br/>
+                            <h4 className="body-copy faded">Come back on desktop to play!<br />(Mobile support is planned for a future update)</h4>
+                        </span>
+                        <img src={unityLogo} alt="unity logo" width="100%" />
+                    </div>
                 </div>
             </React.Fragment>);
         }
@@ -128,15 +139,25 @@ export default class GamePage extends React.Component {
         } else if (!isFullScreen) {
             buttonRow = <div className="row row-spaced  justify-content-center">
                 <RaisedButton onClick={this.showFullscreen} label="Fullscreen" primary />
-                <RaisedButton
-                    label="View Controls"
-                    onClick={this.handleToggle}
-                />
+
+            </div>;
+            controls = <div className="row row-spaced justify-content-center">
+                <Paper className="paper paper-padded" zDepth={2}>
+                    <h3 className="text-center">Controls</h3>
+                    <Divider />
+                    <Menu width={256}>
+                        <MenuItem primaryText="Move" secondaryText="WASD" />
+                        <MenuItem primaryText="Attack" secondaryText="J or Left Click" />
+                        <MenuItem primaryText="Inventory" secondaryText="I or Tab" />
+                        <MenuItem primaryText="Stats" secondaryText="P" />
+                        <MenuItem primaryText="Menu" secondaryText="Esc" />
+                    </Menu>
+                </Paper>
             </div>;
         }
 
         let UnityDivClasses = "row justify-content-center";
-        let outerDivClass = "container";
+        let outerDivClass = "container container-padded";
         if (isFullScreen) {
             UnityDivClasses = "fullscreen";
             outerDivClass = "fullscreen-container";
@@ -144,13 +165,6 @@ export default class GamePage extends React.Component {
         return (
             <React.Fragment>
                 {bar}
-                <Drawer open={true} width="50%">
-                    <MenuItem primaryText="Move" secondaryText="WASD" />
-                    <MenuItem primaryText="Attack" secondaryText="J or Left Click" />
-                    <MenuItem primaryText="Inventory" secondaryText="I or Tab" />
-                    <MenuItem primaryText="Stats" secondaryText="P" />
-                    <MenuItem primaryText="Menu" secondaryText="Esc" />
-                </Drawer>
                 <div className={outerDivClass}>
                     <div className={UnityDivClasses}>
                         <Unity
@@ -159,8 +173,10 @@ export default class GamePage extends React.Component {
                             width={unityWidth} height={unityHeight}
                             onProgress={this.onProgress} />
                     </div>
+
                     {loadingRow}
                     {buttonRow}
+                    {controls}
                 </div>
             </React.Fragment>
         );

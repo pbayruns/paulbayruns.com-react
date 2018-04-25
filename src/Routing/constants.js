@@ -35,6 +35,13 @@ export const PAGES = {
         IS_EXACT: true,
         IS_NAV: false
     },
+    GAME2: {
+        URL: '/game',
+        DISPLAY_NAME: 'Roguelike',
+        COMPONENT: GamePage,
+        IS_EXACT: true,
+        IS_NAV: false
+    },
     NOT_FOUND: {
         URL: '*',
         DISPLAY_NAME: 'File Not Found',

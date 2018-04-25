@@ -24,6 +24,7 @@ export default class LandingPage extends React.Component {
 
                     <div className="row row-spaced justify-content-center">
                         <h1>Paul Bayruns</h1>
+                        <h6 className="faded">Full Stack Developer</h6>
                     </div>
                     <div className="row justify-content-center">
                         <Link to={PAGES.ABOUT.URL}>

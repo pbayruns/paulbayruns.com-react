@@ -93,6 +93,11 @@ h1 {
     padding-bottom: 150px;
 }
 
+.container-padded{
+    padding-top: 75px;
+    padding-bottom: 150px;
+}
+
 .project-row {
     margin-top: 50px;
     margin-bottom: 50px;
