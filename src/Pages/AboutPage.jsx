@@ -19,20 +19,22 @@ export default class AboutPage extends React.Component {
                 <Sitebar />
                 <div className="container container-padded">
                     <div className="row justify-content-center">
-                        <div className="img-center-wrapper">
-                            <img className="img-circle" src={myHead} alt="A vector graphic of my head" />
+                        <div className="img-wrapper-wrapper">
+                            <div className="img-center-wrapper">
+                                <img className="img-circle" src={myHead} alt="A vector graphic of my head" />
+                            </div>
                         </div>
                     </div>
-                    <div className="row row-spaced justify-content-center">
-                        <p className="body-copy">I'm Paul. I'm currently a full stack developer for <a href="http://fitdegree.com/">fitDEGREE</a>,
-                working primarily in Angular 2 and PHP. I'm also experienced with React, Django, Java, C#, and Amazon Web Services.</p>
+                    <div className="row justify-content-center">
+                        <p className="body-copy">Hey there, I'm Paul. I'm currently a full stack developer for <a href="http://fitdegree.com/">fitDEGREE</a>,
+                working primarily in Angular 2 and PHP (Silex). I'm also experienced with React, Django, Java, C#, SQL, and Amazon Web Services.</p>
                     </div>
-                    <div className="row row-spaced justify-content-center">
+                    <div className="row  justify-content-center">
                         <p className="body-copy">I like to engage both halves of my brain, having split my free time at college
                         between the Computer Science and Art departments. As a result, I've picked up a variety of interests over the years including photography, video art, animation, game design, and ASL. </p>
                     </div>
-                    <div className="row row-spaced justify-content-center">
-                        <p className="body-copy">I also work persistently on a variety of personal projects to push myself to constantly learn.
+                    <div className="row  justify-content-center">
+                        <p className="body-copy">A lot of great ideas start small, so I think it's important to support learning with development of personal projects.
                     </p>
                     </div>
                     <div className="row justify-content-center">

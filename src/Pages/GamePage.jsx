@@ -41,11 +41,19 @@ export default class GamePage extends React.Component {
 
     }
 
+    ignoreKeyboardScroll(e) {
+        // space and arrow keys
+        if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+    }
+
     componentWillMount() {
         document.addEventListener("fullscreenchange", this.onFSChanged);
         document.addEventListener("webkitfullscreenchange", this.onFSChanged);
         document.addEventListener("mozfullscreenchange", this.onFSChanged);
         document.addEventListener("MSFullscreenChange", this.onFSChanged);
+        window.addEventListener("keydown", this.ignoreKeyboardScroll, false);
     }
 
     componentWillUnmount() {
@@ -53,6 +61,7 @@ export default class GamePage extends React.Component {
         document.removeEventListener("webkitfullscreenchange", this.onFSChanged);
         document.removeEventListener("mozfullscreenchange", this.onFSChanged);
         document.removeEventListener("MSFullscreenChange", this.onFSChanged);
+        window.removeEventListener("keydown", this.ignoreKeyboardScroll, false);
     }
 
     onFSChanged(event) {
@@ -116,7 +125,7 @@ export default class GamePage extends React.Component {
                     <div className="row row-spaced justify-content-center text-center">
                         <span>
                             <h1 className="body-copy">Unfortunately, mobile devices do not support WebGL.</h1>
-                            <br/>
+                            <br />
                             <h4 className="body-copy faded">Come back on desktop to play!<br />(Mobile support is planned for a future update)</h4>
                         </span>
                         <img src={unityLogo} alt="unity logo" width="100%" />

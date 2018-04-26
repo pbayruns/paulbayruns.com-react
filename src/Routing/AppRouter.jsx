@@ -40,7 +40,7 @@ export default class AppRouter extends React.Component {
 
     render() {
 
-        const fadeTransitionConfig = { stiffness: 200, damping: 22 };
+        const fadeTransitionConfig = { stiffness: 160, damping: 25 };
 
         const popTransitionConfig = { stiffness: 360, damping: 25 };
 
