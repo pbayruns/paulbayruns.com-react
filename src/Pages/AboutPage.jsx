@@ -19,7 +19,9 @@ export default class AboutPage extends React.Component {
                 <Sitebar />
                 <div className="container container-padded">
                     <div className="row justify-content-center">
-                        <img className="img-circle" src={myHead} alt="A vector graphic of my head" />
+                        <div className="img-center-wrapper">
+                            <img className="img-circle" src={myHead} alt="A vector graphic of my head" />
+                        </div>
                     </div>
                     <div className="row row-spaced justify-content-center">
                         <p className="body-copy">I'm Paul. I'm currently a full stack developer for <a href="http://fitdegree.com/">fitDEGREE</a>,

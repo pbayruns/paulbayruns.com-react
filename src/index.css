@@ -44,6 +44,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+.img-center-wrapper{
+    max-width: 200px;
+    width: 50%;
+}
 .img-circle {
     border-radius: 50%;
 }

@@ -129,7 +129,7 @@ export default class GamePage extends React.Component {
             loadingRow =
                 <React.Fragment>
                     <div className="row row-spaced justify-content-center">
-                        <h2>Loading {progress}%</h2>
+                        <h2>Loading {Math.round(progress)}%</h2>
                     </div>
                     <div className="row row-spaced justify-content-center">
                         <LinearProgress style={progressStyle} mode="determinate" value={progress} />
