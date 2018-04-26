@@ -1,6 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'react-toastify/dist/ReactToastify.min.css';
 import { Route } from 'react-router-dom'
 import Binder from '../util/binder.js';
 import { spring, AnimatedSwitch } from 'react-router-transition';

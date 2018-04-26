@@ -22,8 +22,8 @@ export default class Sitebar extends React.Component {
         return (
             <AppBar
                 title={<React.Fragment>
-                    <span className="sitebar-title hidden-under-xxs">Paul Bayruns</span>
-                    <span className="sitebar-title hidden-above-xxs hidden-under-xxxs">PB</span>
+                    <span className="no-select hidden-under-xxs">Paul Bayruns</span>
+                    <span className="no-select hidden-above-xxs hidden-under-xxxs">PB</span>
                 </React.Fragment>}
                 zDepth={0}
                 style={appbarStyle}

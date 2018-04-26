@@ -22,8 +22,8 @@ export default class LandingPage extends React.Component {
 
                     <div className="row row-spaced justify-content-center text-center">
                         <span>
-                            <h1>Paul Bayruns</h1>
-                            <h6 className="faded">Full Stack Developer</h6>
+                            <h1 className="no-select">Paul Bayruns</h1>
+                            <h3 className="faded no-select">Full Stack Developer</h3>
                         </span>
                     </div>
                     <div className="row justify-content-center">
