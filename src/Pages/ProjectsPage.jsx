@@ -9,12 +9,14 @@ import Sitebar from '../Sitebar';
 
 import pokeball from '../img/pokeball.svg'
 import unityLogo from '../img/unity-logo.svg';
+import aftereffectsLogo from '../img/aftereffects_logo.svg'
 import pokeviewer from '../img/pokeviewer.png';
 import roguelike from '../img/roguelike.png';
 
 import ProjectDisplay from '../ProjectDisplay';
+import LinkButton from '../LinkButton';
 
-import { grey800, red500, white } from 'material-ui/styles/colors';
+import { grey800, red500, white, purple400 } from 'material-ui/styles/colors';
 
 const style = {
     marginTop: "75px",
@@ -42,27 +44,58 @@ export default class ProjectsPage extends React.Component {
                             codeURL="https://github.com/pbayruns/unity-roguelike"
                             actionURL={PAGES.GAME.URL}
                             actionText="Play Game"
-                            body={<React.Fragment>A 2D roguelike RPG created in C# using the Unity game engine. Assisted by
-                            <a href="https://www.tomreedillustration.com/">Tom Reed</a> and
-                            <a href="http://justinvisentin.com">Justin Visentin</a> in creation of game art, with original music by Trevor Silva.
-                            </React.Fragment>
+                            body={
+                                <React.Fragment>
+                                    A 2D roguelike RPG created in C# using the Unity game engine. Assisted by
+                                    <a href="https://www.tomreedillustration.com/">Tom Reed</a> and
+                                    <a href="http://justinvisentin.com">Justin Visentin</a> in creation of game art, with original music by Trevor Silva.
+                                </React.Fragment>
+                            }
+                            buttons={
+                                <React.Fragment>
+                                    <LinkButton label="See Code" url="https://github.com/pbayruns/unity-roguelike" labelColor={white} background={grey800}/>
+                                    <LinkButton label="Play Game" url={PAGES.GAME.URL}/>
+                                </React.Fragment>
                             }
                             right
                         />
                     </div>
                     <div className="row project-row justify-content-end">
-                        <div className="col-lg-6 hidden-md-down paper project-screenshot-wrapper">
-                            <span className="img-aligner"></span><img src={pokeviewer} alt="pokeviewer screenshot" className="project-screenshot" />
-                        </div>
-                        <Paper className="col-lg-6 col-md-12 paper-padded paper" zDepth={2}>
-                            <h2 className="project-title"><img src={pokeball} alt="pokeball" className="project-icon" />Pokeviewer</h2>
-                            <Divider />
-                            <p className="body-copy faded">A Silex & HTML-template driven website for viewing information and stats about pokemon, utilizing a publicly available sqlite pokemon database.</p>
-                            <a href="https://github.com/pbayruns/pokeviewer">
-                                <RaisedButton label="See Code" labelColor="white" backgroundColor={red500} style={buttonStyle} />
-                            </a>
-                        </Paper>
+                        <ProjectDisplay
+                            icon={pokeball}
+                            screenshot={pokeviewer}
+                            title="Pokeviewer"
+                            body={
+                                <React.Fragment>
+                                    A Silex & HTML-template driven website for
+                                    viewing information and stats about pokemon, utilizing a
+                                    publicly available sqlite pokemon database.
+                                </React.Fragment>
+                            }
+                            buttons={
+                                <LinkButton label="See Code" url="https://github.com/pbayruns/pokeviewer" labelColor={white} background={red500}/>
+                            }
+                            left
+                        />
+
                     </div>
+                    <div className="row project-row justify-content-start">
+                    <ProjectDisplay
+                        icon={aftereffectsLogo}
+                        screenshot={pokeviewer}
+                        title="Animations"
+                        body={
+                            <React.Fragment>
+                                Animations I've created in Adobe Aftereffects.
+                            </React.Fragment>
+                        }
+                        buttons={
+                            <LinkButton label="See Animations" url={PAGES.ANIMATIONS.URL} labelColor={white} background={purple400}/>
+                        }
+                        right
+                    />
+
+                </div>
                     <div className="row project-row justify-content-center">
                         <h1 className="body-copy text-center faded-half">...and more to come!</h1>
                         <Divider />

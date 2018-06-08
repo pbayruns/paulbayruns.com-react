@@ -8,8 +8,14 @@ import { grey800, white } from 'material-ui/styles/colors';
 
 export default class ProjectDisplay extends React.Component {
 
+    buttons(buttons) {
+        return buttons.map(item => (
+            <h1>{item.name}</h1>
+        ));
+    }
+
     render() {
-        let { icon, title, primary, secondary, codeURL, actionURL, actionText, screenshot, body, right } = this.props;
+        let { icon, title, buttons, screenshot, body, right } = this.props;
 
         return (
             <React.Fragment>
@@ -19,17 +25,12 @@ export default class ProjectDisplay extends React.Component {
                     </div>
                 }
                 <Paper className="col-lg-6 col-md-12 paper-padded paper" zDepth={2}>
-                    <h2 className="project-title"><img src={icon} alt={title + " icon"} className="project-icon" />{title}</h2>
+                    <h2 className="project-title">{ icon && <img src={icon} alt={title + " icon"} className="project-icon" />}{title}</h2>
                     <Divider />
                     <p className="body-copy faded">
                         {body}
                     </p>
-                    <a href={codeURL}>
-                        <RaisedButton label="See Code" labelColor={secondary} backgroundColor={primary} />
-                    </a>
-                    <Link to={actionURL}>
-                        <RaisedButton label={actionText} labelColor={grey800} backgroundColor={white} />
-                    </Link>
+                    { buttons }
                 </Paper>
                 {right &&
                     <div className="col-lg-6 hidden-md-down paper project-screenshot-wrapper">
@@ -44,11 +45,7 @@ export default class ProjectDisplay extends React.Component {
 ProjectDisplay.defaultProps = {
     icon: "",
     title: "",
-    primary: grey800,
-    secondary: white,
-    codeURL: "",
-    actionURL: "",
-    actionText: "",
+    buttons: "",
     screenshot: "",
     body: "",
     right: false
