@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PAGES } from '../Routing/constants.js';
-import RaisedButton from 'material-ui/RaisedButton';
-
-import myHead from "../img/my head.svg";
-import Sitebar from '../Sitebar';
-
-const buttonStyle = {
-    margin: "12px"
-}
+import routes from 'routes';
+import { Button } from '@material-ui/core';
+import myHead from "img/my head.svg";
+import Sitebar from 'Sitebar';
 
 
 export default class AboutPage extends React.Component {
@@ -38,9 +33,7 @@ export default class AboutPage extends React.Component {
                     </p>
                     </div>
                     <div className="row justify-content-center">
-                        <Link to={PAGES.PROJECTS.URL}>
-                            <RaisedButton label="See Projects" primary style={buttonStyle} />
-                        </Link>
+                        <Button component={Link} to={routes.PROJECTS.URL} label="See Projects" primary />
                     </div>
                 </div>
             </React.Fragment>

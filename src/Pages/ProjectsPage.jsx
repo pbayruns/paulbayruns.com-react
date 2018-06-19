@@ -1,37 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PAGES } from '../Routing/constants.js';
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
 
-import Sitebar from '../Sitebar';
+import routes from 'routes';
 
-import pokeball from '../img/pokeball.svg'
-import unityLogo from '../img/unity-logo.svg';
-import aftereffectsLogo from '../img/aftereffects_logo.svg'
-import pokeviewer from '../img/pokeviewer.png';
-import roguelike from '../img/roguelike.png';
+import { Button, Divider } from '@material-ui/core';
 
-import ProjectDisplay from '../ProjectDisplay';
-import LinkButton from '../LinkButton';
+import Sitebar from 'Sitebar';
+
+import pokeball from 'img/pokeball.svg'
+import unityLogo from 'img/unity-logo.svg';
+import aftereffectsLogo from 'img/aftereffects_logo.svg'
+import pokeviewer from 'img/pokeviewer.png';
+import roguelike from 'img/roguelike.png';
+
+import ProjectDisplay from 'ProjectDisplay';
 
 import { grey800, red500, white, purple400 } from 'material-ui/styles/colors';
-
-const style = {
-    marginTop: "75px",
-};
-
-const buttonStyle = {
-    margin: "12px"
-}
 
 export default class ProjectsPage extends React.Component {
     render() {
         return (
             <React.Fragment>
                 <Sitebar />
-                <div style={style} className="container project-container">
+                <div className="container project-container">
                     <div className="row bottom-margin-lg justify-content-center">
                         <h1>Projects</h1>
                     </div>
@@ -42,7 +33,7 @@ export default class ProjectsPage extends React.Component {
                             title="Roguelike RPG"
                             primary={grey800}
                             codeURL="https://github.com/pbayruns/unity-roguelike"
-                            actionURL={PAGES.GAME.URL}
+                            actionURL={routes.GAME.URL}
                             actionText="Play Game"
                             body={
                                 <React.Fragment>
@@ -53,8 +44,8 @@ export default class ProjectsPage extends React.Component {
                             }
                             buttons={
                                 <React.Fragment>
-                                    <LinkButton label="See Code" url="https://github.com/pbayruns/unity-roguelike" labelColor={white} background={grey800}/>
-                                    <LinkButton label="Play Game" url={PAGES.GAME.URL}/>
+                                <Button component={'a'} href="https://github.com/pbayruns/unity-roguelike">See Code</Button>
+                                <Button component={Link} to={routes.GAME.URL}>See Code</Button>
                                 </React.Fragment>
                             }
                             right
@@ -73,7 +64,7 @@ export default class ProjectsPage extends React.Component {
                                 </React.Fragment>
                             }
                             buttons={
-                                <LinkButton label="See Code" url="https://github.com/pbayruns/pokeviewer" labelColor={white} background={red500}/>
+                                <Button component={'a'} href="https://github.com/pbayruns/pokeviewer">See Code</Button>
                             }
                             left
                         />
@@ -90,7 +81,7 @@ export default class ProjectsPage extends React.Component {
                             </React.Fragment>
                         }
                         buttons={
-                            <LinkButton label="See Animations" url={PAGES.ANIMATIONS.URL} labelColor={white} background={purple400}/>
+                            <Button component={Link} to={routes.ANIMATIONS.URL} />
                         }
                         right
                     />

@@ -1,34 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { PAGES } from '../Routing/constants.js';
-import RaisedButton from 'material-ui/RaisedButton';
 import YouTubePlayer from 'react-player/lib/players/YouTube'
-
-
-import myHead from "../img/my head.svg";
-import Sitebar from '../Sitebar';
-
-const buttonStyle = {
-    margin: "12px"
-}
-
-const style = {
-    marginTop: "75px",
-};
+import Sitebar from 'Sitebar';
 
 export default class AnimationsPage extends React.Component {
 
-    constructor(props) {
-        this.state = {
-            url: 'https://www.youtube.com/watch?v=X3EWpvfs8jc'
-        };
+    state = {
+        url: 'https://www.youtube.com/watch?v=X3EWpvfs8jc'
     }
-    
+
     render() {
         return (
             <React.Fragment>
                 <Sitebar />
-                <div style={style} className="container">
+                <div className="container">
                     <div className="row justify-content-center">
                         <h1>Animations</h1>
                     </div>

@@ -1,24 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PAGES } from '../Routing/constants.js';
-import RaisedButton from 'material-ui/RaisedButton';
-import Sitebar from '../Sitebar';
 
-const style = {
-    marginTop: "25vh",
-};
+import routes from 'routes';
+import { Button } from '@material-ui/core';
 
-const buttonStyle = {
-    margin: "12px"
-}
-
+import Sitebar from 'Sitebar';
 
 export default class LandingPage extends React.Component {
     render() {
         return (
             <React.Fragment>
                 <Sitebar />
-                <div style={style} className="container">
+                <div className="container">
 
                     <div className="row row-spaced justify-content-center text-center">
                         <span>
@@ -27,12 +20,8 @@ export default class LandingPage extends React.Component {
                         </span>
                     </div>
                     <div className="row justify-content-center">
-                        <Link to={PAGES.ABOUT.URL}>
-                            <RaisedButton label="About Me" primary={true} style={buttonStyle} />
-                        </Link>
-                        <Link to={PAGES.PROJECTS.URL}>
-                            <RaisedButton label="Projects" primary={true} style={buttonStyle} />
-                        </Link>
+                        <Button component={Link} to={routes.ABOUT.URL} label="About Me" primary />
+                        <Button component={Link} to={routes.PROJECTS.URL} label="Projects" primary />
                     </div>
                 </div>
             </React.Fragment>

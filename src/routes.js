@@ -1,13 +1,13 @@
 
-import LandingPage from '../Pages/LandingPage';
-import NotFoundPage from '../Pages/NotFoundPage';
-import ProjectsPage from '../Pages/ProjectsPage';
-import AboutPage from '../Pages/AboutPage';
-import GamePage from '../Pages/GamePage';
-import AnimationsPage from '../Pages/AnimationsPage';
+import {
+    LandingPage, NotFoundPage,
+    AboutPage, AnimationsPage,
+    GamePage,
+    ProjectsPage,
+} from 'pages';
 
-//Constants for pages to be used across any page that has routes or redirects
-export const PAGES = {
+//Constants for routes to be used across any page that has routes or redirects
+const routes = {
     LANDING: {
         URL: '/',
         DISPLAY_NAME: 'Landing Page',
@@ -58,3 +58,5 @@ export const PAGES = {
         IS_NAV: false
     }
 }
+
+export default routes;

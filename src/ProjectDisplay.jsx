@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
+import { Divider, Paper, Button } from '@material-ui/core';
+
 import { Link } from 'react-router-dom';
 import { grey800, white } from 'material-ui/styles/colors';
 

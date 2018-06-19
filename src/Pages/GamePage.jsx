@@ -1,15 +1,9 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import LinearProgress from 'material-ui/LinearProgress';
-
-import Binder from '../util/binder.js';
+import Binder from 'util/binder.js';
 import Unity from 'react-unity-webgl';
-import Sitebar from '../Sitebar';
+import Sitebar from 'Sitebar';
 
-import MenuItem from 'material-ui/MenuItem';
-import Paper from 'material-ui/Paper';
-import Menu from 'material-ui/Menu';
-import Divider from 'material-ui/Divider/Divider';
+import { Button, Paper, Divider, LinearProgress, Menu, MenuItem } from '@material-ui/core';
 
 import unityLogo from '../img/unity-logo.svg';
 
@@ -66,9 +60,7 @@ export default class GamePage extends React.Component {
 
     onFSChanged(event) {
         console.log("EVENT", event);
-        /*
 
-        */
         this.setState({
             isFullScreen: !this.state.isFullScreen
         });
@@ -146,7 +138,7 @@ export default class GamePage extends React.Component {
                 </React.Fragment>;
         } else if (!isFullScreen) {
             buttonRow = <div className="row row-spaced  justify-content-center">
-                <RaisedButton onClick={this.showFullscreen} label="Fullscreen" primary />
+                <Button onClick={this.showFullscreen} label="Fullscreen" primary />
 
             </div>;
             controls = <div className="row row-spaced justify-content-center">

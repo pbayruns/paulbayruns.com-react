@@ -1,19 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { PAGES } from './Routing/constants.js';
+
+import routes from 'routes';
 import FlatButton from 'material-ui/FlatButton';
-import AppBar from 'material-ui/AppBar';
 
-
-const appbarStyle = {
-    backgroundColor: "white",
-    color: "black"
-}
-
-const appbarTitleStyle = {
-    color: "black",
-    fontWeight: "300"
-}
+import { AppBar, Button } from '@material-ui/core';
 
 export default class Sitebar extends React.Component {
 
@@ -26,18 +17,16 @@ export default class Sitebar extends React.Component {
                     <span className="no-select hidden-above-xxs hidden-under-xxxs">PB</span>
                 </React.Fragment>}
                 zDepth={0}
-                style={appbarStyle}
-                titleStyle={appbarTitleStyle}
             >
                 <div className="row justify-content-center navbar">
-                    <NavLink to={PAGES.LANDING.URL} exact activeClassName="navlink-active">
-                        <FlatButton label="Home" />
+                    <NavLink to={routes.LANDING.URL} exact activeClassName="navlink-active">
+                        <Button label="Home" />
                     </NavLink>
-                    <NavLink to={PAGES.ABOUT.URL} activeClassName="navlink-active">
-                        <FlatButton label="About" />
+                    <NavLink to={routes.ABOUT.URL} activeClassName="navlink-active">
+                        <Button label="About" />
                     </NavLink>
-                    <NavLink to={PAGES.PROJECTS.URL} activeClassName="navlink-active">
-                        <FlatButton label="Projects" />
+                    <NavLink to={routes.PROJECTS.URL} activeClassName="navlink-active">
+                        <Button label="Projects" />
                     </NavLink>
                 </div>
             </AppBar>
