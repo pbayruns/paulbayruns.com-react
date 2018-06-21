@@ -15,7 +15,6 @@ import roguelike from 'img/roguelike.png';
 
 import ProjectDisplay from 'ProjectDisplay';
 
-import { grey800, red500, white, purple400 } from 'material-ui/styles/colors';
 
 export default class ProjectsPage extends React.Component {
     render() {
@@ -31,7 +30,6 @@ export default class ProjectsPage extends React.Component {
                             icon={unityLogo}
                             screenshot={roguelike}
                             title="Roguelike RPG"
-                            primary={grey800}
                             codeURL="https://github.com/pbayruns/unity-roguelike"
                             actionURL={routes.GAME.URL}
                             actionText="Play Game"

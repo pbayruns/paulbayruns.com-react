@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Divider, Paper, Button } from '@material-ui/core';
 
-import { Link } from 'react-router-dom';
-import { grey800, white } from 'material-ui/styles/colors';
 
 export default class ProjectDisplay extends React.Component {
 

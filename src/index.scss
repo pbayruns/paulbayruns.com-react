@@ -13,14 +13,126 @@ h2,
 h3,
 h4,
 h5,
-h6,
-h7 {
+h6 {
     font-weight: 300;
 }
 
 h1 {
     font-size: 3em;
 }
+
+a {
+    color: #4DA3FF;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.no-select {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.float-right {
+    float: right;
+}
+
+/*
+**************************************
+******CUSTOM SCROLLBAR****************
+**************************************
+*/
+
+*::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+    background: #FFF;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #C1C1C1;
+}
+
+/*
+**************************************
+******LAYOUT UTILITIES****************
+**************************************
+*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.row.bottom {
+    margin-bottom: 100px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row.centered,
+.col.centered {
+    justify-content: center;
+    align-items: center;
+}
+
+.row.right,
+.col.right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.row.left,
+.col.left {
+    justify-content: start;
+    align-items: start;
+}
+
+.row.padded,
+.col.padded {
+    padding: 15px;
+}
+
+/*
+**************************************
+***********OTHER STUFF****************
+**************************************
+*/
 
 .fullscreen {
     width: 100vw;
@@ -35,44 +147,8 @@ h1 {
     overflow: hidden;
 }
 
-a {
-    color: #4DA3FF;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-.navbar {
-    padding-top: 17px;
-}
-
-.no-select {
-    pointer-events: none;
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-
 .btn-spaced {
     margin: 12px;
-}
-
-.text-center {
-    text-align: center;
 }
 
 .row-spaced {
@@ -88,7 +164,8 @@ a:hover {
         opacity: 1;
     }
 }
-.img-wrapper-wrapper{
+
+.img-wrapper-wrapper {
     max-width: 200px;
     min-height: 200px;
     width: 50%;
@@ -118,7 +195,7 @@ a:hover {
     max-width: 500px;
 }
 
-.navlink-active>button {
+.navlink-active {
     color: #FF9800 !important;
 }
 
@@ -143,9 +220,10 @@ a:hover {
     margin-right: 5px;
 }
 
-.project-screenshot-wrapper{
+.project-screenshot-wrapper {
     min-width: 50%;
 }
+
 .project-screenshot {
     height: auto;
     width: auto;
