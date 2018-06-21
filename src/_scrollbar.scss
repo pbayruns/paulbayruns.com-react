@@ -1,0 +1,19 @@
+
+/*
+**************************************
+******CUSTOM SCROLLBAR****************
+**************************************
+*/
+
+*::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+    background: #FFF;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #C1C1C1;
+}
